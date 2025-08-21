@@ -10,8 +10,8 @@ const app = express();
 
 // ✅ Enable CORS (allow React frontend to talk to backend)
 app.use(cors({
-  origin: ["https://frontend-4zzf.onrender.com"],  // ✅ frontend
-  methods: ["GET", "POST", "PUT", "DELETE"],
+  origin: ["https://frontend-hzfz.onrender.com/"],  // ✅ frontend
+  methods: ["GET", "POST", "PUT", "DELETE"],  
   credentials: true,
 }));
 
