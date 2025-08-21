@@ -10,7 +10,7 @@ const app = express();
 
 // ✅ Enable CORS (allow React frontend to talk to backend)
 app.use(cors({
-  origin: ["https://foodexpresswebsite-3.onrender.com"],  // ✅ frontend
+  origin: ["https://frontend-4zzf.onrender.com"],  // ✅ frontend
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
 }));
