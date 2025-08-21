@@ -1,24 +1,23 @@
-dotenv.config();
 const express = require("express");
 const dotenv = require("dotenv");
 const connectDB = require("./config/db");
 const cors = require("cors");   // ✅ Added
 
-
+dotenv.config();
 connectDB();
 
 const app = express();
 
-
-// ✅ This is important to parse JSON body
-app.use(express.json());
-
 // ✅ Enable CORS (allow React frontend to talk to backend)
 app.use(cors({
-  origin: ["https://frontend-hzfz.onrender.com/"],  // ✅ frontend
+  origin: ["https://frontend-zx12.onrender.com"],  // ✅ frontend
   methods: ["GET", "POST", "PUT", "DELETE"],  
   credentials: true,
 }));
+
+// ✅ This is important to parse JSON body
+app.use(express.json());
+app.use(cors());
 
 // Routes
 app.use("/api/users", require("./routes/userRoutes"));
